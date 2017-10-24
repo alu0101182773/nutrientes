@@ -1,8 +1,14 @@
 # Nutrientes
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/nutrientes`. To experiment with that code, run `bin/console` for an interactive prompt.
+This gem is used to caluclate the kilocalories of foods given their amount of macronutrients. It was developed by using test-driven development.
 
-TODO: Delete this and the text above, and describe your gem
+Author: Malte Bossert
+Práctica 6, Lenguajes y Paradigmas de Programación
+Universidad de la Laguna, Tenerife
+
+Brief description [Spanish]:
+
+Para llevar a cabo todos los procesos que nos permiten estar vivos, el organismo humano necesita un suministro continuo de materiales que debemos ingerir: los nutrientes. Sin embargo, estos nutrientes no se ingieren directamente, sino que forman parte de los alimentos. Las múltiples combinaciones en que la naturaleza ofrece los diferentes nutrientes nos dan una amplia variedad de alimentos que el ser humano puede consumir.
 
 ## Installation
 
