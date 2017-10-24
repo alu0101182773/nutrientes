@@ -34,4 +34,24 @@ RSpec.describe Alimento do
     end
 
   end
+
+  describe "Getter methods for each instance variable" do
+
+    it "has a method to get the name" do
+      expect(@choco.nombre).to eq("Chocolate")
+    end
+
+    it "has a method to get the proteinas" do
+      expect(@choco.proteinas).to eq(5.3)
+    end
+
+    it "has a method to get the glucidos" do
+      expect(@choco.glucidos).to eq(47.0)
+    end
+
+    it "has a method to get the grasas" do
+      expect(@choco.grasas).to eq(30.0)
+    end
+
+  end
 end
