@@ -2,11 +2,20 @@ require "spec_helper"
 require "nutrientes"
 
 RSpec.describe Nutrientes do
-  it "has a version number" do
-    expect(Nutrientes::VERSION).not_to be nil
+
+  before :each do
+    @choco = Alimento.new("Chocolate", 5.3, 47.0, 30.0)
   end
 
-  it "does something useful" do
-    expect(false).to eq(true)
+  describe "formal requisites" do
+    
+    it "has a version number" do
+      expect(Nutrientes::VERSION).not_to be nil
+    end
+
   end
+
+  #describe "basic properties of a food" do
+
+  #end
 end
