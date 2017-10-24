@@ -62,4 +62,11 @@ RSpec.describe Alimento do
     end
 
   end
+
+  describe "Calculating methods" do
+   
+    it "should exist a method to calculate the energetic value" do
+      expect(@choco.valorEnergetico(100)).to eq(479.2)
+    end
+  end
 end
