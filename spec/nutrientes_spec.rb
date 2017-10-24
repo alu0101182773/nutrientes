@@ -1,4 +1,5 @@
 require "spec_helper"
+require "nutrientes"
 
 RSpec.describe Nutrientes do
   it "has a version number" do

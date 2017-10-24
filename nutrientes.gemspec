@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Malte Bossert"]
   spec.email         = ["alu0101182773@ull.edu.es"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{Gem to represent foods and their nutrients.}
+  spec.description   = %q{This gem includes a class that was built using test-driven development with rspec. It can be initialised with a food and its values (in gramms) of macronutrients, say Carbohydrates, Fats and Proteins}
+  spec.homepage      = "https://github.com/ULL-ESIT-LPP-1718/tdd-alu0101182773"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
