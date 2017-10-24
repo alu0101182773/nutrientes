@@ -2,7 +2,11 @@ require "nutrientes/version"
 
 class Alimento
 
-  def initialize (name, proteinas, glucidos, lipidos)
+  def initialize (nombre, proteinas, glucidos, grasas)
+    @nombre = nombre
+    @proteinas = proteinas
+    @glucidos = glucidos
+    @grasas = grasas
   end
 
 end
