@@ -13,7 +13,10 @@ class Alimento
 
   def to_s 
     "#{@nombre}:\nProteínas:\t #{@proteinas} gramos\nGlúcidos:\t #{@glucidos} gramos\nLípidos:\t #{@grasas} gramos"
+  end
 
+  def valorEnergetico (gramos) 
+    ((@proteinas * 4 + @glucidos * 4 + @grasas * 9) / 100) * gramos
   end
 end
 
