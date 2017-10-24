@@ -1,5 +1,9 @@
 require "nutrientes/version"
 
-module Nutrientes
-  # Your code goes here...
+class Alimento
+
+  def initialize (name, proteinas, glucidos, lipidos)
+  end
+
 end
+
