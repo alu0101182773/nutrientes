@@ -54,4 +54,12 @@ RSpec.describe Alimento do
     end
 
   end
+
+  describe "Format of output" do
+    
+    it "should exist a nice to-String-Method" do
+      expect(@choco.to_s).to eq("Chocolate:\nProteínas:\t 5.3 gramos\nGlúcidos:\t 47.0 gramos\nLípidos:\t 30.0 gramos")
+    end
+
+  end
 end
