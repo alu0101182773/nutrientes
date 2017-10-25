@@ -41,15 +41,15 @@ RSpec.describe Alimento do
       expect(@choco.nombre).to eq("Chocolate")
     end
 
-    it "has a method to get the proteinas" do
+    it "has a method to get the percentage of proteins" do
       expect(@choco.proteinas).to eq(5.3)
     end
 
-    it "has a method to get the glucidos" do
+    it "has a method to get the percentage of carbohydrates" do
       expect(@choco.glucidos).to eq(47.0)
     end
 
-    it "has a method to get the grasas" do
+    it "has a method to get the percentage of fat" do
       expect(@choco.grasas).to eq(30.0)
     end
 
@@ -58,7 +58,7 @@ RSpec.describe Alimento do
   describe "Format of output" do
     
     it "should exist a nice to-String-Method" do
-      expect(@choco.to_s).to eq("Chocolate:\nProteínas:\t 5.3 gramos\nGlúcidos:\t 47.0 gramos\nLípidos:\t 30.0 gramos")
+      expect(@choco.to_s).to eq("Chocolate:\nProteínas:\t 5.3 gramos\nGlúcidos:\t 47.0 gramos\nLípidos:\t 30.0 gramos\n\t\t por 100 gramos")
     end
 
   end
