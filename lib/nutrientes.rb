@@ -23,6 +23,12 @@ end
 
 class List
 
+  def initialize
 
+  end
+
+  def add (value)
+
+  end
 
 end
