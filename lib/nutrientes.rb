@@ -20,3 +20,9 @@ class Alimento
   end
 end
 
+
+class List
+
+
+
+end
