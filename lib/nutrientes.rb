@@ -32,12 +32,30 @@ class List
 
   end
 
+  def isEmpty?
+    if @head == nil then
+      true
+    else
+      false
+    end
+  end
+
   def add (value)
 
     if @tail == nil then
       @head = Node.new(value, nil, nil)
       @tail = @head
+    else
+      temp = Node.new(value, nil, @tail)
+      @tail.next = temp
+      @tail = temp
     end
+
+  end
+
+  def addAll (array)
+
+    array.each { |value| add(value) }
 
   end
   
