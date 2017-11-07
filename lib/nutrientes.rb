@@ -23,11 +23,27 @@ end
 
 class List
 
+  Node = Struct.new("Node", :value, :next, :prev)
+  
   def initialize
+
+    @head = nil
+    @tail = nil
 
   end
 
   def add (value)
+
+    if @tail == nil then
+      @head = Node.new(value, nil, nil)
+      @tail = @head
+    end
+
+  end
+  
+  def getNode
+
+    @head
 
   end
 
