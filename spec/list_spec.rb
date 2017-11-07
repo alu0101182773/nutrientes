@@ -22,6 +22,11 @@ RSpec.describe List do
       expect(list.getNode()).to eq(Struct::Node.new(42, nil, nil))
     end
 
+    it "should be possible to put many objects into the list" do
+      list = List.new()
+      list.addAll([1,2,4,8])
+    end
+
   end   
 
 end
