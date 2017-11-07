@@ -83,4 +83,14 @@ class List
     tempArray
   end
 
+  def to_a_reverse
+    tempArray = []
+    tempNode = @tail
+    while tempNode != nil do
+      tempArray.push(tempNode.value)
+      tempNode = tempNode.prev
+    end
+    tempArray
+  end
+
 end

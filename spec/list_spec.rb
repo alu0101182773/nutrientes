@@ -50,6 +50,14 @@ RSpec.describe List do
       list.add(32)
       expect(list.to_a()).to eq([1,2,4,8,16,32])
     end
+    
+    it "should be able to make a reverse Array from the list" do
+      list = List.new()
+      list.addAll([1,2,4,8,16])
+      expect(list.to_a_reverse()).to eq([16,8,4,2,1])
+      list.add(32)
+      expect(list.to_a_reverse()).to eq([32,16,8,4,2,1])
+    end
 
   end
 end
