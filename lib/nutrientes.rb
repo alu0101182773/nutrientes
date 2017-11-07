@@ -65,4 +65,22 @@ class List
 
   end
 
+  def head
+    @head.value
+  end
+
+  def tail   
+    @tail.value
+  end
+
+  def to_a
+    tempArray = []
+    tempNode = @head
+    while tempNode != nil do
+      tempArray.push(tempNode.value)
+      tempNode = tempNode.next
+    end
+    tempArray
+  end
+
 end

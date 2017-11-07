@@ -33,5 +33,23 @@ RSpec.describe List do
     end
 
   end   
+  
+  context "Get Elements of List" do
+    
+    it "should be able to get the first and last Value" do
+      list = List.new()
+      list.addAll([1,2,4,8])
+      expect(list.head()).to eq(1)
+      expect(list.tail()).to eq(8)
+    end
 
+    it "should be able to make an Array from the list" do
+      list = List.new()
+      list.addAll([1,2,4,8,16])
+      expect(list.to_a()).to eq([1,2,4,8,16])
+      list.add(32)
+      expect(list.to_a()).to eq([1,2,4,8,16,32])
+    end
+
+  end
 end
