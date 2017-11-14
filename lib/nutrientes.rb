@@ -16,7 +16,15 @@ class Alimento
     "#{@nombre}:\nProteínas:\t #{@proteinas} gramos\nGlúcidos:\t #{@glucidos} gramos\nLípidos:\t #{@grasas} gramos\n\t\t por 100 gramos"
   end
 
-  def valorEnergetico (gramos) 
+  def valorEnergetico (gramos = 100) 
     ((@proteinas * 4 + @glucidos * 4 + @grasas * 9) / 100) * gramos
+  end
+
+  def <=> (anOther)
+    if anOther.is_a?(Alimento) == false
+      nil
+    else
+      self.valorEnergetico <=> anOther.valorEnergetico
+    end
   end
 end

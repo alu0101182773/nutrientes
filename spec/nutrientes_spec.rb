@@ -76,5 +76,14 @@ RSpec.describe Alimento do
     it "should include the mixin Comparable" do
       expect(Alimento.include?(Comparable)).to eq(true)
     end
+
+    it "should give the right result when comparing two foods" do
+      expect(@choco > @cerdo).to eq(true)
+      expect(@huevoFrito.between?(@cerdo, @choco)).to eq(true)
+      expect(@cerdo == @cerdo).to eq(true)
+      expect(@cerdo >= @huevoFrito).to eq(false)
+      hi = "Hi!"
+      expect(@choco <=> hi).to eq(nil)
+    end
   end
 end
