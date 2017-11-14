@@ -60,4 +60,22 @@ RSpec.describe List do
     end
 
   end
+
+  context "Mixin Enumerable" do
+
+    before :each do
+      @list = List.new()
+      @list.addAll([2,1,6,5,4,3])
+    end
+
+    it "should include the mixin Enumerable" do
+      expect(List.include?(Enumerable)).to eq(true)
+    end
+    it "should include each method" do
+      sum = 0
+      @list.each { |i| sum += i }
+      expect(sum).to eq(21)
+    end
+  end
+
 end

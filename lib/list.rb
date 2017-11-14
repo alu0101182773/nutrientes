@@ -2,6 +2,7 @@ require 'nutrientes/version'
 
 class List
 
+  include Enumerable
   Node = Struct.new("Node", :value, :next, :prev)
   
   def initialize
@@ -70,6 +71,10 @@ class List
       tempNode = tempNode.prev
     end
     tempArray
+  end
+
+  def each
+    self.to_a.each { |i| yield i }
   end
 
 end
