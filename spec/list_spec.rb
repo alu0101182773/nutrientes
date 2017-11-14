@@ -76,6 +76,24 @@ RSpec.describe List do
       @list.each { |i| sum += i }
       expect(sum).to eq(21)
     end
+    it "should include collect method" do
+      expect(@list.collect {|i| i.to_s + "x"}).to eq(["2x", "1x", "6x", "5x", "4x", "3x"])
+    end
+    it "should include detect method" do
+      expect(@list.detect{|i| i.between?(2,3)}).to eq(2)
+    end
+    it "should include select method" do
+      expect(@list.select{|i|i.between?(3,5)}).to eq([5,4,3])
+    end
+    it "should include sort method" do
+      expect(@list.sort).to eq([1,2,3,4,5,6])
+    end
+    it "should include max method" do
+      expect(@list.max).to eq(6)
+    end
+    it "should include min method" do
+      expect(@list.min).to eq(1)
+    end
   end
 
 end
