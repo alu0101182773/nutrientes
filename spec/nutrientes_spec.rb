@@ -5,6 +5,8 @@ RSpec.describe Alimento do
 
   before :each do
     @choco = Alimento.new("Chocolate", 5.3, 47.0, 30.0)
+    @huevoFrito = Alimento.new("Huevo Frito", 14.1, 0.0, 19.5)
+    @cerdo = Alimento.new("Cerdo", 21.5, 0.0, 6.3)
   end
 
   describe "formal requisites" do
@@ -67,6 +69,12 @@ RSpec.describe Alimento do
    
     it "should exist a method to calculate the energetic value" do
       expect(@choco.valorEnergetico(100)).to eq(479.2)
+    end
+  end
+
+  describe "Testing Comparable" do
+    it "should include the mixin Comparable" do
+      expect(Alimento.include?(Comparable)).to eq(true)
     end
   end
 end
