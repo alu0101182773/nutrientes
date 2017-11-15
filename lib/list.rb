@@ -5,6 +5,8 @@ require 'nutrientes/version'
 class List
 
   include Enumerable
+  # This structure is used to represent Nodes in the List,
+  # which have a value, a next node and a previous node
   Node = Struct.new("Node", :value, :next, :prev)
   
   # initializes the vales of the list's head and tail to nil

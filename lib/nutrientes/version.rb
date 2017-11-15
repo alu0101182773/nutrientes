@@ -8,5 +8,6 @@
 # Author::    Malte Bossert
 
 module Nutrientes
+  # The actual version of the Ruby gem
   VERSION = "0.1.0"
 end
