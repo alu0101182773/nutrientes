@@ -1,0 +1,4 @@
+lib/list.rb 09cb2c8e3cb365d7bc57b93e527f36a4df022fa9
+lib/jerarquia.rb 291d181450b582e62d7dc30ebbd18c44e4973742
+lib/nutrientes.rb 5179617077a7cab6643ff027f62c56fca7bba441
+lib/nutrientes/version.rb c5982dda3f2b19170ae0e2fc185acf6c5ebdc881
