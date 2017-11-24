@@ -95,6 +95,9 @@ RSpec.describe Alimento do
       expect(@cerdo >= @huevoFrito).to eq(false)
       hi = "Hi!"
       expect(@choco <=> hi).to eq(nil)
+    end
+  end
+
   describe "Indice Glucemico" do
 
     it "should be possible to add measurements to a Food" do
