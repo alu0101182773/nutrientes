@@ -5,6 +5,7 @@ require "nutrientes/version"
 # The mixin Comparable is included.
 class Alimento
   
+
   include Comparable
   attr_reader :nombre, :proteinas, :glucidos, :grasas
 
