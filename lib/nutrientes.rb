@@ -5,7 +5,6 @@ require "nutrientes/version"
 # The mixin Comparable is included.
 class Alimento
   
-
   include Comparable
   attr_reader :nombre, :proteinas, :glucidos, :grasas
 
@@ -15,6 +14,9 @@ class Alimento
     @proteinas = proteinas
     @glucidos = glucidos
     @grasas = grasas
+    @concentracionThis = []
+    @concentracionGlucosa = []
+
   end
 
   # returns this food in a nicely formatted way
@@ -36,5 +38,19 @@ class Alimento
     else
       self.valorEnergetico <=> anOther.valorEnergetico
     end
+  end
+
+  def addMeasurement (alimento, glucosa)
+    @concentracionThis << alimento
+    @concentracionGlucosa << glucosa
+  end
+
+  def indiceGlucemico
+    # AIBC
+    aibc = lambda {|list| list.drop(1).zip(list.first(list.count - 1)).map {|i| i[0] < list.first ? 0 : (((i[0] - list.first) + (i[1] - list.first))/2) * 5}.reduce(:+)}
+    # IG ind
+    igIndAll = @concentracionThis.zip(@concentracionGlucosa).map{|dataPair| [aibc.call(dataPair[0]), aibc.call(dataPair[1])]}.map{|aibcPair| (aibcPair[0] / aibcPair[1]) * 100}
+    # IG
+    igIndAll.reduce(:+)/igIndAll.count
   end
 end
