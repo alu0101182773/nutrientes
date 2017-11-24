@@ -40,11 +40,14 @@ class Alimento
     end
   end
 
+  # Adds a pair of measurements to the data of this food
   def addMeasurement (alimento, glucosa)
     @concentracionThis << alimento
     @concentracionGlucosa << glucosa
   end
-
+  
+  # calculates the glucemic index of this food based on its values that were
+  # added in addMeasurement
   def indiceGlucemico
     # AIBC
     aibc = lambda {|list| list.drop(1).zip(list.first(list.count - 1)).map {|i| i[0] < list.first ? 0 : (((i[0] - list.first) + (i[1] - list.first))/2) * 5}.reduce(:+)}
