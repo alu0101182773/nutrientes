@@ -39,13 +39,13 @@ class Alimento
       self.valorEnergetico <=> anOther.valorEnergetico
     end
   end
-   def addMeasurement (alimento, glucosa)
+
+  def addMeasurement (alimento, glucosa)
     @concentracionThis << alimento
     @concentracionGlucosa << glucosa
   end
 
   def indiceGlucemico
-
     # AIBC
     aibc = lambda {|list| list.drop(1).zip(list.first(list.count - 1)).map {|i| i[0] < list.first ? 0 : (((i[0] - list.first) + (i[1] - list.first))/2) * 5}.reduce(:+)}
     # IG ind
